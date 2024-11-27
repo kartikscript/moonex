@@ -23,42 +23,44 @@ function App() {
           <div className=" absolute top-[20%] left-[15%] rounded-full shadow-[0_0_250px_90px] shadow-yellow-200"/>
           <div className=" absolute bottom-[30%] right-[15%] rounded-full shadow-[0_0_250px_60px] shadow-yellow-200"/>
           <Navbar/> 
-          <div className='px-20 my-auto space-y-4'>
+          <div className='px-10 sm:px-20 my-auto space-y-4'>
             <h1 className='text-6xl font-bold tracking-wide'>Trusted Multi-Chain <br/><span className='text-yellow-300'>DEX</span> Platform</h1>
             <h3 className='text-gray-400 text-lg font-mono font-medium'>Trade, earn, and own crypto on the all-in-one multi-chain DEX</h3>
-            <div className='pt-8 space-x-8'>
+            <div className='pt-8 sm:space-x-8 sm:block flex flex-col items-center gap-6'>
               <button className="px-4 py-2 bg-gradient-to-br from-yellow-400 to-yellow-200 text-gray-800 rounded-full font-bold text-sm hover:from-yellow-500 hover:to-yellow-300  transition-all duration-200 delay-75">Connect Wallet</button>
               <button className="px-4 py-2 text-yellow-500 rounded-full font-bold text-sm border-2 border-yellow-500 hover:bg-yellow-500 hover:text-gray-800 transition-all duration-200 delay-75">Trade Crypto</button>
             </div>
           </div>
         </main>
-        <div className='px-16 mt-40'>
+        <div className='px-16 md:mt-40'>
           <section className='space-y-14'>
-            <h2 className='text-4xl font-mono px-14 font-bold tracking-wide'>Why <span className='text-yellow-500'>MoonEX</span> ?</h2>
-            <table className="relative flex flex-col bg-gray-900 px-10 pt-8 pb-12 rounded-2xl border-collapse">
+            <h2 className='text-3xl sm:text-4xl font-mono text-center sm:text-start sm:pl-14 font-bold tracking-wide'>Why <span className='text-yellow-500'>MoonEX</span> ?</h2>
+            <div className='relative px-10 pt-8 pb-12 rounded-2xl bg-gray-900'>
               <div className=" absolute bottom-[5%] left-[40%] rounded-full shadow-[0_0_300px_60px] shadow-yellow-200"/>
               <div className='absolute top-auto bottom-auto left-[33%] h-[90%] w-[1px] bg-gray-700 '/>
               <div className='absolute top-auto bottom-auto left-[66%] h-[90%] w-[1px] bg-gray-700 '/>
-              <thead>
-                <tr className='text-2xl font-mono tracking-wider grid grid-cols-3 justify-items-center  *:py-8'>
-                  <th className='text-yellow-400'>Comparision</th>
-                  <th className='inline-flex gap-2 text-yellow-400'><img src='/images/logo.png' alt='logo' width={30} height={30}/> MOONEX</th>
-                  <th className='text-pink-400'>UNISWAP</th>
-                </tr>
-              </thead>
-              <tbody className='text-lg text-gray-400  tracking-wide *:border-t last:*:border-b *:border-gray-700 *:grid *:grid-cols-3 *:justify-items-center '>
-                {
-                  ['1. Point no one','2. Point no one','3. Point no one','4. Point no one','5. Point no one']
-                     .map(item=>(
-                        <tr key={item} className='*:py-6 *:px-20'>
-                          <td className='place-self-start'>{item}</td>
-                          <td >✔</td>
-                          <td >❌</td>
-                        </tr>
-                     ))
-                }
-              </tbody>
-            </table>
+              <table className=" w-full ">
+                <thead>
+                  <tr className='text-sm md:text-lg lg:text-2xl font-mono tracking-wider grid grid-cols-3 justify-items-center  *:py-8'>
+                    <th className='text-yellow-400'>Comparision</th>
+                    <th className='inline-flex gap-2 text-yellow-400'><img src='/images/logo.png' alt='logo' width={30} height={30}/> MOONEX</th>
+                    <th className='text-pink-400'>UNISWAP</th>
+                  </tr>
+                </thead>
+                <tbody className='text-lg text-gray-400  tracking-wide *:border-t last:*:border-b *:border-gray-700 *:grid *:grid-cols-3 *:justify-items-center '>
+                  {
+                    ['1. Point no one','2. Point no one','3. Point no one','4. Point no one','5. Point no one']
+                      .map(item=>(
+                          <tr key={item} className='*:py-6 md:*:pl-10 lg:*:pl-20'>
+                            <td className='place-self-start'>{item}</td>
+                            <td >✔</td>
+                            <td >❌</td>
+                          </tr>
+                      ))
+                  }
+                </tbody>
+              </table>
+            </div>
           </section>
           <section className='mt-16 space-y-10'>
             <h2 className='text-4xl text-center font-mono px-14 font-bold tracking-wide'>Our <span className='text-yellow-500'>Features</span></h2>

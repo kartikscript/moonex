@@ -2,7 +2,7 @@
 
 const SolarSystem = () => {
   return (
-    <div className="">
+    <div className="opacity-50 sm:opacity-100">
       {/* Orbits */}
       <div className="left-52 top-2  absolute skew-y-[25deg] skew-x-[20deg] -rotate-[28deg]  border border-gray-600 rounded-full  w-[600px] h-[600px] "/>
       <div className="left-20 -top-32  absolute skew-y-[25deg] skew-x-[20deg] -rotate-[28deg]  border border-gray-600 rounded-full  w-[900px] h-[900px] "/>
