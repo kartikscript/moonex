@@ -32,16 +32,16 @@ function App() {
             </div>
           </div>
         </main>
-        <div className='px-16 md:mt-40'>
+        <div className='px-6 sm:px-16 mt-4 md:mt-40'>
           <section className='space-y-14'>
             <h2 className='text-3xl sm:text-4xl font-mono text-center sm:text-start sm:pl-14 font-bold tracking-wide'>Why <span className='text-yellow-500'>MoonEX</span> ?</h2>
-            <div className='relative px-10 pt-8 pb-12 rounded-2xl bg-gray-900'>
+            <div className='relative px-3 sm:px-10 pt-8 pb-12 rounded-2xl bg-gray-900'>
               <div className=" absolute bottom-[5%] left-[40%] rounded-full shadow-[0_0_300px_60px] shadow-yellow-200"/>
               <div className='absolute top-auto bottom-auto left-[33%] h-[90%] w-[1px] bg-gray-700 '/>
               <div className='absolute top-auto bottom-auto left-[66%] h-[90%] w-[1px] bg-gray-700 '/>
               <table className=" w-full ">
                 <thead>
-                  <tr className='text-sm md:text-lg lg:text-2xl font-mono tracking-wider grid grid-cols-3 justify-items-center  *:py-8'>
+                  <tr className='text-sm md:text-lg lg:text-2xl font-mono tracking-wider grid grid-cols-3 justify-items-center gap-2 *:py-8'>
                     <th className='text-yellow-400'>Comparision</th>
                     <th className='inline-flex gap-2 text-yellow-400'><img src='/images/logo.png' alt='logo' width={30} height={30}/> MOONEX</th>
                     <th className='text-pink-400'>UNISWAP</th>
@@ -51,7 +51,7 @@ function App() {
                   {
                     ['1. Point no one','2. Point no one','3. Point no one','4. Point no one','5. Point no one']
                       .map(item=>(
-                          <tr key={item} className='*:py-6 md:*:pl-10 lg:*:pl-20'>
+                          <tr key={item} className='*:py-6   md:*:pl-10 lg:*:pl-20'>
                             <td className='place-self-start'>{item}</td>
                             <td >✔</td>
                             <td >❌</td>
@@ -64,7 +64,7 @@ function App() {
           </section>
           <section className='mt-16 space-y-10'>
             <h2 className='text-4xl text-center font-mono px-14 font-bold tracking-wide'>Our <span className='text-yellow-500'>Features</span></h2>
-            <main className='grid grid-cols-4 gap-8'>
+            <main className='grid sm:grid-cols-2 xl:grid-cols-4 gap-8'>
               <div className='space-y-3 bg-gray-900 p-8 rounded-2xl'>
                 <FaDollarSign className='stroke-white size-12 bg-gray-800 p-3 mb-8 rounded-full'/>
                 <h2 className='text-lg font-medium'>Cheapest TXs</h2>
@@ -91,20 +91,20 @@ function App() {
           <div className=" absolute bottom-[5%] left-[0%] rounded-full shadow-[0_0_300px_60px] shadow-yellow-200"/>
           <div className=" absolute top-[30%] right-[0%] rounded-full shadow-[0_0_300px_60px] shadow-yellow-200"/>
 
-            <div className='w-[70%]  mx-auto space-y-6 bg-gray-900 rounded-2xl py-6'>
+            <div className=' sm:w-[90%] xl:w-[70%]  mx-auto space-y-6 bg-gray-900 rounded-2xl py-6'>
               <h2 className='text-3xl text-center  font-mono px-14 font-bold tracking-wide'>FAQs</h2>
               <main className=''>
                 {
                   faqList.map(({id,query,solution})=>(
-                    <div key={id} onClick={()=>handleFAQList(id)} className='flex items-center justify-between px-20 py-6 border-y border-gray-800 cursor-pointer'>
+                    <div key={id} onClick={()=>handleFAQList(id)} className='flex items-center justify-between gap-6 px-4 sm:px-10 lg:px-20 py-6 border-y border-gray-800 cursor-pointer'>
                       <div className='space-y-4'>
-                        <h2 className='text-lg'>{query}</h2>
+                        <h2 className='text-sm sm:text-lg'>{query}</h2>
                         {ActiveQueryId===id && <p className='text-gray-500'>{solution}</p>}
                       </div>
                       {ActiveQueryId===id ?(
-                        <LuMinus className='stroke-white size-8 self-center bg-gray-800 p-1 rounded-full'/>
+                        <LuMinus className='stroke-white size-8 bg-gray-800 p-1 rounded-full'/>
                       ):(
-                        <IoIosAdd className='stroke-white size-8 self-center bg-gray-800 p-1 rounded-full'/>
+                        <IoIosAdd className='stroke-white size-8 bg-gray-800 p-1 rounded-full'/>
                       )
                       }
                     </div>
@@ -114,7 +114,7 @@ function App() {
             </div>
           </section>
         </div>
-        <footer className='h-[40vh] bg-gray-950 px-20 flex justify-between items-center'>
+        <footer className='h-[40vh] bg-gray-950 px-10 lg:px-20 py-16 space-y-10 lg:flex  justify-between items-center'>
           <div className="flex flex-col items-center gap-2">
             <img
             src="/images/logo.png"
@@ -124,10 +124,10 @@ function App() {
             />
             <h1 className=" flex-1 text-yellow-300 font-mono text-2xl tracking-wide ">MOONEX</h1>
           </div>
-          <div className="flex gap-10">
+          <div className=" text-center space-y-2 sm:flex justify-center gap-10">
             {
               ['Home','About','Roadmap','FAQs','Contact Us'].map(item=>(
-                <a href="/" key={item} className="font-semibold tracking-wide text-gray-50 hover:text-yellow-300 transition-all duration-200">{item}</a>
+                <a href="/" key={item} className="font-semibold block tracking-wide text-gray-50 hover:text-yellow-300 transition-all duration-200">{item}</a>
               ))
             }
           </div>
