@@ -114,7 +114,7 @@ function App() {
             </div>
           </section>
         </div>
-        <footer className='h-[40vh] bg-gray-950 px-10 lg:px-20 py-16 space-y-10 lg:flex  justify-between items-center'>
+        <footer className='sm:h-[40vh] bg-gray-950 px-10 lg:px-20 py-16 space-y-10 lg:flex  justify-between items-center'>
           <div className="flex flex-col items-center gap-2">
             <img
             src="/images/logo.png"
