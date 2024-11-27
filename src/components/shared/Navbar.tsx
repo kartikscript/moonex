@@ -35,6 +35,15 @@ const Navbar = () => {
        onClick={()=>setOpenMenu(false)}
        className={`fixed right-0 top-0 w-full ${openMenu ?'h-full ':'h-0 '} overflow-hidden z-50 backdrop-blur-xl flex flex-col items-center justify-center gap-10 transition-all duration-200`}
        >
+        <div className="flex  items-center gap-6 mb-16" >
+        <img
+        className="size-[80px] "
+        src="/images/logo.png"
+        alt="logo"
+        
+        />
+        <h1 className=" text-yellow-300 font-mono text-4xl tracking-wide ">MOONEX</h1>
+      </div>
         {openMenu&&<div className="fixed top-0 right-0 size-full bg-black/40 z-40"/>}
         {  
           ['Home','About','Roadmap','FAQs','Contact Us'].map(item=>(
