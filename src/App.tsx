@@ -51,8 +51,8 @@ function App() {
                   {
                     ['1. Point no one','2. Point no one','3. Point no one','4. Point no one','5. Point no one']
                       .map(item=>(
-                          <tr key={item} className='*:py-6   md:*:pl-10 lg:*:pl-20'>
-                            <td className='place-self-start'>{item}</td>
+                          <tr key={item} className='*:py-6   '>
+                            <td className='md:pl-10 lg:pl-20 place-self-start'>{item}</td>
                             <td >✔</td>
                             <td >❌</td>
                           </tr>
@@ -114,7 +114,7 @@ function App() {
             </div>
           </section>
         </div>
-        <footer className='sm:h-[40vh] bg-gray-950 px-10 lg:px-20 py-16 space-y-10 lg:flex  justify-between items-center'>
+        <footer className='sm:h-[40vh] bg-gray-950 px-10 lg:px-20 py-16 space-y-10 lg:space-y-0 lg:flex  justify-between items-center'>
           <div className="flex flex-col items-center gap-2">
             <img
             src="/images/logo.png"
@@ -124,7 +124,7 @@ function App() {
             />
             <h1 className=" flex-1 text-yellow-300 font-mono text-2xl tracking-wide ">MOONEX</h1>
           </div>
-          <div className=" text-center space-y-2 sm:flex justify-center gap-10">
+          <div className=" text-center space-y-2 sm:space-y-0 sm:flex justify-center gap-10">
             {
               ['Home','About','Roadmap','FAQs','Contact Us'].map(item=>(
                 <a href="/" key={item} className="font-semibold block tracking-wide text-gray-50 hover:text-yellow-300 transition-all duration-200">{item}</a>
